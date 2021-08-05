@@ -1,6 +1,6 @@
 package com.aadesh.quizapp
 
-data class questions(
+ class questions(
     val id:Int,
     val question:String,
     val image:Int,

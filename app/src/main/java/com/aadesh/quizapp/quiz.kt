@@ -23,15 +23,12 @@ class quiz : AppCompatActivity(), View.OnClickListener {
     var mcurrentpos: Int = 1
     var correctcount:Int = 0
     var musername:String?=null
-    var mtotal:String?=null
-    var mcorrect:String?=null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
         musername = intent.getStringExtra(constants.USERNAME)
-
         mquestionslist = constants.getquestion()
         setquestion()
         tv_option_one.setOnClickListener(this)
@@ -107,10 +104,10 @@ class quiz : AppCompatActivity(), View.OnClickListener {
                     if(question!!.correctanswer!=mselectedoptionpos)
                     {
                         answerview(mselectedoptionpos, R.drawable.wronganswer)
-                        answerview(question!!.correctanswer,R.drawable.correctanswer)
+                        answerview(question.correctanswer,R.drawable.correctanswer)
                     }
                     else {
-                        answerview(question!!.correctanswer, R.drawable.correctanswer)
+                        answerview(question.correctanswer, R.drawable.correctanswer)
                         correctcount++
                     }
                     if ( mcurrentpos == mquestionslist!!.size)
