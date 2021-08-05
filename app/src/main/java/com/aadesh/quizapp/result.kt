@@ -1,4 +1,5 @@
 package com.aadesh.quizapp
+//result activity
 
 import android.content.Intent
 import android.os.Bundle
